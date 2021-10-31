@@ -1,0 +1,32 @@
+# Sudo Help
+# © 2021, Mybutton Corporation
+# All rights reserved.
+
+@: What is sudo?
+-> Sudo is a free program that brings the 'sudo' command that is available in linux system to windows.
+
+
+@: How do I run commands?
+-> Sudo <command name>
+
+@: What is .bsh?
+-> .bsh is short for bash, that is run by sudo. you can create a .bsh file and code 
+-> it like a batch file, and sudo will process and make it a bash file. 
+-> you can run a .bsh file with the helper\register.bat file; and it will register
+-> that bsh file as a sudo command.
+
+@: How can I add commands?
+-> Commands can be added like this:
+C:\users\user1\\> sudo register-command <Path\to\command\file.bsh>
+[register] -> registered command as 'name_of_bsh_file'
+
+-> Now, you can use sudo <command name> to run this command
+
+@: Terms of Service
+http://run.mybutton.org/tos
+
+
+
+@: Why is sudo so big?
+-> Sudo is run with linux libraries, that are hand coded. 
+-> Making linux from scratch is a big duty.
