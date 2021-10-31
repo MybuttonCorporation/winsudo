@@ -1,0 +1,6 @@
+ASSOC [.run]==app
+# ASSOCIATE run WITH BASH.RUN
+FTYPE app==INIT(%1 %*)
+# COMMENT 
+run => INIT(%1.run) [APP]
+# ENDCOMMENT

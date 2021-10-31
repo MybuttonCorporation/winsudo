@@ -1,0 +1,10 @@
+# ! sudoCppCompiler -c \\sudo.cpp
+# ! \\sudo.exe
+# ! sudoAddResource \\sudo.exe \\.file
+# ! sudoResourceIndex \\${this.data}
+# ! sudoResourceCompileBat \\sudo.exe\.file\\index.bsh
+# ! sudoCppCompiler -waitForExit;
+# ! sudoCppCompiler -on exit(); 
+# ! sudoCppCompiler -connection close; -service close;
+# ! sudoResourceService -exit;
+exit /b

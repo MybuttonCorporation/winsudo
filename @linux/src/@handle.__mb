@@ -1,0 +1,28 @@
+# define handle
+# region [@handle.__mb]
+!sudoPath! => "sudo" -> "admin" = "dev.null && localhost.credits.js"
+
+
+# setData [__mb] (
+    cmds == command_folder,
+    __sudo-protect == true,
+    __assembly == false; 
+)
+# setData [__bsh] (
+    runner?: {
+        path == "%~dp0\sudo\helper\register.bat",
+        iFileExtensionName == "bshfile",
+        iLocalHostCredit == true; ".\admin\*.null & *.js",
+        iTestFolderLocation == ".\test",
+        iLocalDatabase#write == void, (param i, param val),
+        iLocalDataBase#delete == void, (param i, param val),
+        iLocalDataBase#index == ".\!sudoPath!",
+        iLocalDataBase#_set_protected_commands == ".\sudo\cmds\_protected.ini"
+        iLocalDataBase#iFileExtensionName == iFileExtensionName.ildb,
+        iLocalDataBase#index#admin == developerModeOnly?true, location?".\!sudopath!\admin"
+    }
+)
+
+# setData (__assembly) {
+    __assembly#runner == wac ("__bash.iLocalHostDataBase.index.protocol.sudo \\")
+}

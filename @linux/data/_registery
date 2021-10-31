@@ -1,0 +1,6 @@
+ASSOC [_registery]==registery
+# ASSOCIATE BSHFILE WITH BASH.RUN
+FTYPE _registery==registery(%1.reg %*_registery)
+# COMMENT 
+BSHFILE => INIT(%1.run) [APP]
+# ENDCOMMENT
